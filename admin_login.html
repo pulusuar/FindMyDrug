@@ -1,0 +1,33 @@
+<?php
+include('login.php');
+
+if(isset($_SESSION["user_name"])){
+	header("Location: admin_home.php");
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Find My Drug</title>
+<style>
+.wrapper{
+	text-align:center;
+}
+</style>
+</head>
+<form method="post" action="login.php">
+<h2 style="text-align:center;">Welcome to Find My Drug</h2>
+<h4 style="text-align:center;">Admin Login</h4>
+<div class="wrapper">
+<input id="user_name" style="text-align:center;align:center;" type="text" placeholder="Username" name="user_name" required autofocus/>
+<span class="error"><?php echo $userErr; ?></span><br /><br />
+<input id="password" style="text-align:center;align:center;" type="password" placeholder="Password" name="password" required />
+<span class="error"><?php echo $passwordErr; ?></span>
+<br /><br />
+</div>
+<div class="wrapper">
+<button style="text-align:center;" type="submit" name="submit">Login</button>
+</div>
+</form>
+</html>

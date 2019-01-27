@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Store</title>
+<style>
+.button{
+	background-color: #0000ff;
+	border:none;
+	color:white;
+	padding:15px 32px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	margin:4px 2px;
+	cursor:pointer;
+}
+.wrapper{
+	text-align:center;
+}
+.new,input[type=text],input[type=telephone],input[type=password]{
+	width:40%;
+	padding:12px 20px;
+	margin:8px 0;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:4px;
+	box-sizing: border-box;
+}
+</style>
+</head>
+<form method="post" action="add_store.php">
+<h3 style="text-align:center;">Enter Store Details</h3>
+<div class="wrapper">
+<input type="text" style="align:middle;" name="shopname" placeholder="Shop Name" id="shopname" required />
+<span class="error"><?php echo $inputErr; ?></span><br /><br />
+<input type="text" name="address" placeholder="Address" id="address" required />
+<span class="error"><?php echo $addressErr; ?></span><br /><br />
+<input type="telephone" name="phone" placeholder="Phone No." id="phone" required />
+<span class="error"><?php echo $phoneErr; ?></span><br /><br />
+<input type="text" name="username" placeholder="Username" id="username" required />
+<span class="error"><?php echo $usernameErr; ?></span><br /><br />
+<input type="password" name="password" placeholder="Password" id="password" required />
+<span class="error"><?php echo $passwordErr; ?></span><br /><br />
+<input type="password" name="confirmPassword" placeholder="Confirm Password" id="confirmPassword" required />
+<span class="error"><?php echo $conpwdErr; ?></span><br /><br />
+<input type="text" name="latitude" placeholder="Latitude" id="latitude" required />
+<span class="error"><?php echo $latitudeErr; ?></span><br /><br />
+<input type="text" name="longitude" placeholder="Longitude" id="longitude" required />
+<span class="error"><?php echo $longitudeErr; ?></span><br /><br />
+<input type="text" name="city" placeholder="City" id="city" required />
+<span class="error"><?php echo $cityErr; ?></span><br /><br />
+<p>Do you provide home delivery?</p><br />
+<select class="new" name="delivery">
+	<option value="yes" selected>Yes</option>
+	<option value="no">No</option>
+</select><br /><br />
+<input type="text" name="birthPlace" placeholder="Your place of birth?" id="birthPlace" required />
+<span class="error"><?php echo $birthErr; ?></span><br /><br />
+<input type="text" name="favDish" placeholder="Your favourite dish?" id="favDish" required />
+<span class="error"><?php echo $dishErr; ?></span><br /><br />
+
+
+</div>
+<div class="wrapper">
+<button type="submit" class="button" style="text-align:center;">Add Store</button>
+</div>
+</form>
+</html>

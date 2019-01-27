@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<hmtl>
+<head>
+<title>Remove Store</title>
+<style>
+.wrapper{
+	text-align:center;
+}
+.button{
+	background-color: #0000ff;
+	border:none;
+	color:white;
+	padding:15px 32px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	margin:4px 2px;
+	cursor:pointer;
+}
+input[type=text]{
+	width:40%;
+	padding:12px 20px;
+	margin:8px 0;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:4px;
+	box-sizing: border-box;
+}
+</style>
+</head>
+<form method="post" action="remove_store.php">
+<h4 style="text-align:center;">Remove Store</h4>
+<div class="wrapper">
+<input type="text" name="username" placeholder="Enter Store Username" id="username"/>
+<span class="error"><?php echo $userErr; ?></span><br /><br />
+</div>
+<div class="wrapper">
+<button class="button" type="submit">Remove Store</button>
+</div>
+</form>
+</html>
